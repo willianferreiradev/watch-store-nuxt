@@ -15,7 +15,10 @@
     "test": "jest"
   },
   "lint-staged": {
-    "*.{js,vue}": "eslint --cache",
+    "*.{js,vue}": [
+      "eslint --cache",
+      "lintfix"
+    ],
     "*.**": "prettier --check --ignore-unknown"
   },
   "dependencies": {
